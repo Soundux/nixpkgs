@@ -23744,6 +23744,11 @@ in
 
   redoflacs = callPackage ../applications/audio/redoflacs { };
 
+  soundux = callPackage ../applications/audio/soundux { };
+  soundux-downloader = soundux.override {
+    downloaderSupport = true;
+  };
+
   flameshot = libsForQt5.callPackage ../tools/misc/flameshot { };
 
   fluxbox = callPackage ../applications/window-managers/fluxbox { };
